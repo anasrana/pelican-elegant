@@ -1,5 +1,11 @@
 /* Base */
 /* #push.height = -#content-sans-footer.margin-bottom = #footer.margin-top + ul.footer-content */
+
+// import some fonts for arabic and urdu
+@import url(http://fonts.googleapis.com/earlyaccess/notonastaliqurdu.css);
+@import url(http://fonts.googleapis.com/earlyaccess/amiri.css);
+@import url(https://fonts.googleapis.com/css?family=Lateef&subset=arabic,latin);
+
 body,
 html {
     height: 100%;
@@ -68,6 +74,18 @@ ul.footer-content li {
     vertical-align: middle;
     height: 100%;
 }
+// Adding arabic and urdu fonts font class
+*[lang=arabic] {
+    // text-align: right;
+    // direction: rtl;
+    font-family: 'Amiri';
+}
+*[lang=ur] {
+    text-align: right;
+    direction: rtl;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+// end arabic script support
 .elegant-power {
     text-align: right;
 }
@@ -603,4 +621,3 @@ div.figure.align-left, .article-content img.align-left {
     float: left;
     margin-right: 1.5em;
 }
-
